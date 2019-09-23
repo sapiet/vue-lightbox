@@ -1,0 +1,17 @@
+<div class="lightbox" v-if="url" @click.self="close">
+    <transition :name="transition">
+        <lightbox-image :url="url" :key="url"/>
+    </transition>
+
+    <button class="lightbox-close" @click="close">
+        <i class="fas fa-times"></i>
+    </button>
+
+    <button class="lightbox-previous" @click="previous">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <button class="lightbox-next" @click="next">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>

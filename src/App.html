@@ -1,0 +1,19 @@
+<div id="app">
+    <a
+            v-for="index in 10"
+            :href="`https://loremflickr.com/800/600/dog?lock=${index}`"
+            v-lightbox
+    >
+        <img :src="`https://loremflickr.com/150/150/dog?lock=${index}`">
+    </a>
+
+    <a
+            v-for="index in 10"
+            :href="`https://loremflickr.com/800/600/cat?lock=${index+10}`"
+            v-lightbox="'cat'"
+    >
+        <img :src="`https://loremflickr.com/150/150/cat?lock=${index+10}`">
+    </a>
+
+    <lightbox></lightbox>
+</div>

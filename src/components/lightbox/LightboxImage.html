@@ -1,0 +1,9 @@
+<div>
+    <div v-if="loading" class="lightbox-loader">
+        <i class="fas fa-circle-notch fa-spin"></i>
+    </div>
+
+    <transition name="lightbox-fade">
+        <img :src="src" class="lightbox-image" :style="style" :key="src">
+    </transition>
+</div>
